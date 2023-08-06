@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class CadastroProdutos {
 	
-	private Set<Produto> produtoSet;
+	protected Set<Produto> produtoSet;
 
 	public CadastroProdutos() {
 		this.produtoSet = new HashSet<>();
@@ -23,7 +23,7 @@ public class CadastroProdutos {
 	
 	public Set<Produto> exibirProdutosPorPreco() {
 		Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
-		produtoSet.addAll(produtoSet);
+		produtosPorPreco.addAll(produtoSet);
 		return produtosPorPreco;
 		
 	}
