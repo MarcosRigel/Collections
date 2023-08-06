@@ -1,6 +1,4 @@
-package main.java.list;
-
-import main.java.list.OperacoesBasicas.ListaTarefa;
+package main.java.list.OperacoesBasicas;
 
 public class Main {
 
