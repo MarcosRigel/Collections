@@ -1,5 +1,7 @@
 package main.java.set.OperacoesBasicas;
 
+import java.util.Objects;
+
 public class Convidado {
 
 	private String nome;
@@ -17,10 +19,27 @@ public class Convidado {
 	public int getCodigoConvite() {
 		return codigoConvite;
 	}
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(getCodigoConvite());
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Convidado convidado)) {
+			return false;
+		}
+		return getCodigoConvite() == convidado.getCodigoConvite();
+	}
 
 	@Override
 	public String toString() {
-		return "Convidado [nome=" + nome + ", codigoConvite=" + codigoConvite + "]";
+		return "Convidado nome=" + nome + ", codigoConvite=" + codigoConvite + "\n";
 	}
 	
 	
