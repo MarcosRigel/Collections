@@ -19,7 +19,7 @@ public class EstoqueProdutos {
 		System.out.println(estoqueProdutosMap);
 	}
 	
-	public double calculaValorTotalEstoque() {
+	public double calcularValorTotalEstoque() {
 		double valorTotalEstoque = 0.0;
 		if (!estoqueProdutosMap.isEmpty()) {
 			for (Produto p : estoqueProdutosMap.values()) {
